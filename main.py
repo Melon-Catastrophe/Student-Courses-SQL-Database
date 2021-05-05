@@ -152,7 +152,7 @@ if __name__ == '__main__':
   print("Welcome to Database Manager")
   
   while True:
-    print("\n1) Create Tables", "\n2) Populate Tables", "\n3) Insert into Table...", "\n4) Display...", "\n5) Delete Table(s)..." "\n6) Quit\n")
+    print("\n1) Create Tables", "\n2) Populate Tables", "\n3) Insert into Table...", "\n4) Display...", "\n5) Delete..." "\n6) Quit\n")
     choice = input(">  ")
     if choice == '1':
       create_tables()
@@ -228,6 +228,16 @@ if __name__ == '__main__':
 
     elif choice == '6':
       break
+    elif choice == '7':
+          connection.execute('DELETE FROM students WHERE students.id = 1')
+          connection.commit()
+          print("Deleted students.id = 1")
+          connection.execute('DELETE FROM courses_has_students WHERE students_id = 1')
+          connection.commit()
+          print("Deleted from courses_has_students WHERE students_id = 1")
+          # cursor.execute('SELECT * FROM students WHERE id = 1')
+          # for item in cursor.fetchall():
+          #   print(item)
     else:
       print("Please enter a choice 1-6.")
 
