@@ -1,36 +1,42 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+I have learned somewhat recently about SQL Databases, which I find very interesting. I decided that I wanted to make a program in Python that can make and interact with a database, so I made this to increase my skill set in both Python and SQL as well as to show myself that I can make cool programs.
 
-{Provide a description the software that you wrote and how it integrates with a SQL Relational Database. Describe how to use your program.}
+This is a program I made in Python that is able to read and write from an SQL Relational Database. The database stores information about students, courses, and the particular courses that each student is taking. 
 
-{Describe your purpose for writing this software.}
+To start the program, you can either run the main.py file or you can run the .exe file that was compiled. When it runs, you will see some options. These options are: 
+1) Create Tables
+2) Populate Tables
+3) Insert into Table...
+4) Display...
+5) Delete...
+6) Quit
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of how created the Relational Database.}
+A user can create and populate the tables with default values, display individual tables or all of the tables in the database, insert data into individual tables, delete a specific entry in a table, delete all tables, or quit. The options with a '...' have more specific options that will show after being selected. 
 
-[Software Demo Video](http://youtube.link.goes.here)
+Sometimes, the program will ask for text input. An example of this occurs when deleting a specific entry from a table. Simply type the text that it asks for. If unsure what to type, just hit enter and you will see a messing telling you what the program expects.
+
+[Link to Demo Video](https://youtu.be/m8JAX_JKE14)
 
 # Relational Database
 
-{Describe the relational database you are using.}
+I am using a relational database that I created. I created it using SQLite. There is an option in the code to re-create and populate the tables back to their default values. 
 
-{Describe the structure (tables) of the relational database that you created.}
+There are three tables in this student_courses.db database: students, courses, and courses_has_students. The tables 'courses' and 'students' are joined in a many to many relationship using a bridge table called 'courses_has_students'. This junction table allows information to be stored about the courses that each individual student is taking.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+I coded this program in Python using Visual Studio Code. I used the libraries SQLite and Tabulate to help me create this. Pyinstaller was used to create an .exe of the file so that anyone can run it without needing to download Python. 
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [Stack Overflow](https://stackoverflow.com/)
+* [W3 Schools - Python](https://www.w3schools.com/python/)
+* [W3 Schools - SQL](https://www.w3schools.com/sql/)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+Known bugs and improvements to be made:
+* A GUI would be nice, but the program would still function in more or less the same way.
+* Entering multiple words or very long words can sometimes overload the program and cause it to stop. 
+* It would be cool if the program could be changed so that the text that is displayed is cleared from the window and replaced with the relevant text. For instance, going into a submenu could clear the screen and show just the submenu. I believe this could be accomplished using the curses library. 
